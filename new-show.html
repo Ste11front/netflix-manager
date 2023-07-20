@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new show</title>
+</head>
+<body>
+    <header>
+        <h2>Inserisci un nuovo show</h2>
+    </header>
+    <main>
+        <form id="create-form" name="create" onsubmit="sendData(event)">
+            <div>
+                <label for="title">Inserisci il titolo</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div>
+                <label for="author">Inserisci l'autore</label>
+                <input type="text" name="author" id="author">      
+            </div>
+            <div>
+                <label for="imageUrl">Inserisci l'url dell'immagine</label>
+                <input type="text" name="imageUrl" id="imageUrl">      
+            </div>
+            <div>
+                <label for="isOver">spunta se la serie è conclusa</label>
+                <input type="checkbox" name="isOver" id="isOver">
+            </div>
+            <!-- <input style="visibility: hidden;" type="number" name="upVotes" id="upVotes" value="0">
+            <input style="visibility: hidden;" type="number" name="downVotes" id="downVotes" value="0"> -->
+            <button type="submit">invia</button>
+        </form>
+    </main>
+</body>
+<script src="./services/db-service.js"></script>
+<script src="./new-show.js"></script>
+</html>
