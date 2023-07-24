@@ -10,6 +10,32 @@
     <div id="app">
 
     </div>
+    <div>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog -->
+        <dialog id="newShowDialog">
+        <form id="create-form">
+          <p>
+            <label>
+              Favorite animal:
+              <select>
+                <option value="default">Choose…</option>
+                <option>Brine shrimp</option>
+                <option>Red panda</option>
+                <option>Spider monkey</option>
+              </select>
+            </label>
+          </p>
+          <div>
+            <button value="cancel" formmethod="dialog">Cancel</button>
+            <button id="confirmBtn" value="default">Confirm</button>
+          </div>
+        </form>
+      </dialog>
+      <p>
+        <button id="showDialog">Show the dialog</button>
+      </p>
+
+    </div>
 </body>
 <script src="./services/db-service.js"></script>
 <script src="./controllers/app-controller.js"></script>

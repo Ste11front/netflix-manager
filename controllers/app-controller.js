@@ -112,6 +112,7 @@ class AppController {
     }
 
     sortByDownvotes() {
+        //this.orderMethod = 'downvote'
         this.shows.sort((s1, s2) => s2.downVotes - s1.downVotes);
         this.renderShows();
     }

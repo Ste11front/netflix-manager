@@ -18,3 +18,30 @@
 const app = new AppController();
 
 app.init();
+
+const showButton = document.getElementById("showDialog");
+const newShowDialog = document.getElementById("newShowDialog");
+
+const outputBox = document.querySelector("output");
+const selectEl = newShowDialog.querySelector("select");
+const confirmBtn = newShowDialog.querySelector("#confirmBtn");
+
+showButton.addEventListener("click", () => {
+  newShowDialog.showModal();
+});
+
+selectEl.addEventListener("change", (e) => {
+  confirmBtn.value = selectEl.value;
+});
+
+newShowDialog.addEventListener("close", (e) => {
+  outputBox.value =
+    newShowDialog.returnValue === "default"
+      ? "No return value."
+      : `ReturnValue: ${newShowDialog.returnValue}.`;
+});
+
+confirmBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  newShowDialog.close();
+});
